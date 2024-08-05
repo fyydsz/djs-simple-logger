@@ -3,6 +3,19 @@ const client = new Client();
 const messageDeleted = "https://discord.com/api/webhooks/1269911252029673492/bDfUU55gV41nCHgJol8VpEhgf6QB-BToMiMQ9tnqVxz3LQv_l3VCy2aSE1MShmws4VXb"
 const messageEdited = "https://discord.com/api/webhooks/1269929369133121638/NmpNo_33CVecyXKzS73DP-ZF2aIx8ZbBbymHv1BOCCaxQwX-EM0g9Jlhf8px9Qeudo92"
 
+const express = require("express");
+const app = express();
+const port = 3000;
+
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
+
+app.listen(port, () => {
+  console.log(`Listening to port 3000`);
+})
+
 const env = require("dotenv")
 env.configDotenv()
 
